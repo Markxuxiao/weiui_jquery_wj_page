@@ -5,6 +5,7 @@ $(function(){
 		if(loading) return;
 		loading = true;//上锁
 		$.post(ajax_list.api,ajax_list.data,function(data){
+			$('#imloading').show();
 			if(!data.msg){
 				loading = true;//上锁
 				$('#imloading').hide();
@@ -13,7 +14,8 @@ $(function(){
 				return;
 			}
 			var html = template('template_item',data);
-			$('#masonry').append(html);
+			$('#masonry').append(html)
+			$('#imloading').hide();
 			ajax_list.page_index++;//页数加1
 			loading = false;//解锁
 		});
