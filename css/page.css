@@ -1,0 +1,18 @@
+.color_red{color:red;}
+.color_black{color:#686868;}
+
+.weui-form-preview {
+	margin-bottom:10px;
+}
+
+.border_bottom{
+	border-bottom: 1px solid #f5f5f5;
+}
+
+.demos-title {
+    text-align: center;
+    font-size: 34px;
+    color: #3cc51f;
+    font-weight: 400;
+    margin: 20px  15%;
+}

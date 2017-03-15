@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+        <title>万家</title>
+        <link rel="stylesheet" href="./css/weui.1.1.1.css"/>
+        <link rel="stylesheet" href="./css/jquery-weui.css">
+        <link rel="stylesheet" href="./css/commen.css"/>
+        <link rel="stylesheet" href="./css/page.css"/>
+    </head>
+    <body>
+
+                <div class="weui-cell" style="background-color: #fff;margin-bottom: 10px;">
+                    <div class="weui-cell__bd">
+                        <p>商品信息</p>
+                        <p style="font-size: 13px;color: #888888;">2017年3月13日</p>
+                    </div>
+                </div>
+                <div class="page__bd" id="masonry">
+                    <div class="weui-form-preview">
+                        <div class="weui-form-preview__bd">
+                            <div class="weui-form-preview__item">
+                                <label class="weui-form-preview__label">商品</label>
+                                <span class="weui-form-preview__value">某某某商品名称标题</span>
+                            </div>
+                            <div class="weui-form-preview__item">
+                                <label class="weui-form-preview__label">数量</label>
+                                <span class="weui-form-preview__value">123423</span>
+                            </div>
+                        </div>
+                        <div class="weui-form-preview__ft">
+                            <a class="weui-form-preview__btn weui-form-preview__btn_primary" href="page5.html">确&nbsp;&nbsp;&nbsp;认</a>
+                        </div>
+                    </div>
+
+                    <div class="weui-form-preview">
+                        <div class="weui-form-preview__bd">
+                            <div class="weui-form-preview__item">
+                                <label class="weui-form-preview__label">商品</label>
+                                <span class="weui-form-preview__value">某某某商品名称标题</span>
+                            </div>
+                            <div class="weui-form-preview__item">
+                                <label class="weui-form-preview__label">数量</label>
+                                <span class="weui-form-preview__value">123423</span>
+                            </div>
+                        </div>
+                        <div class="weui-form-preview__ft">
+                            <a class="weui-form-preview__btn weui-form-preview__btn_primary" href="javascript:">确&nbsp;&nbsp;&nbsp;认</a>
+                        </div>
+                    </div>
+
+                    <div class="weui-form-preview">
+                        <div class="weui-form-preview__bd">
+                            <div class="weui-form-preview__item">
+                                <label class="weui-form-preview__label">商品</label>
+                                <span class="weui-form-preview__value">某某某商品名称标题</span>
+                            </div>
+                            <div class="weui-form-preview__item">
+                                <label class="weui-form-preview__label">数量</label>
+                                <span class="weui-form-preview__value">123423</span>
+                            </div>
+                        </div>
+                        <div class="weui-form-preview__ft">
+                            <a class="weui-form-preview__btn weui-form-preview__btn_primary" href="javascript:">确&nbsp;&nbsp;&nbsp;认</a>
+                        </div>
+                    </div>
+
+                    <div class="weui-form-preview">
+                        <div class="weui-form-preview__bd">
+                            <div class="weui-form-preview__item">
+                                <label class="weui-form-preview__label">商品</label>
+                                <span class="weui-form-preview__value">某某某商品名称标题</span>
+                            </div>
+                            <div class="weui-form-preview__item">
+                                <label class="weui-form-preview__label">数量</label>
+                                <span class="weui-form-preview__value">123423</span>
+                            </div>
+                        </div>
+                        <div class="weui-form-preview__ft">
+                            <a class="weui-form-preview__btn weui-form-preview__btn_primary" href="javascript:">确&nbsp;&nbsp;&nbsp;认</a>
+                        </div>
+                    </div>
+
+                    <div class="weui-form-preview">
+                        <div class="weui-form-preview__bd">
+                            <div class="weui-form-preview__item">
+                                <label class="weui-form-preview__label">商品</label>
+                                <span class="weui-form-preview__value">某某某商品名称标题</span>
+                            </div>
+                            <div class="weui-form-preview__item">
+                                <label class="weui-form-preview__label">数量</label>
+                                <span class="weui-form-preview__value">123423</span>
+                            </div>
+                        </div>
+                        <div class="weui-form-preview__ft">
+                            <a class="weui-form-preview__btn weui-form-preview__btn_primary" href="javascript:">确&nbsp;&nbsp;&nbsp;认</a>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="weui-loadmore" id="imloading">
+                      <i class="weui-loading"></i>
+                      <span class="weui-loadmore__tips">正在加载</span>
+                </div>
+                <div class="weui-loadmore weui-loadmore_line" style="display: none;" id="noMore">
+                    <span class="weui-loadmore__tips">没有更多数据</span>
+                </div>
+
+
+                <script id="template_item" type="text/html">
+                    {{each list as value i}}
+                        <div class="weui-form-preview">
+                            <div class="weui-form-preview__bd">
+                                <div class="weui-form-preview__item">
+                                    <label class="weui-form-preview__label">商品</label>
+                                    <span class="weui-form-preview__value">某某某商品名称标题</span>
+                                </div>
+                                <div class="weui-form-preview__item">
+                                    <label class="weui-form-preview__label">数量</label>
+                                    <span class="weui-form-preview__value">123423</span>
+                                </div>
+                            </div>
+                            <div class="weui-form-preview__ft">
+                                <a class="weui-form-preview__btn weui-form-preview__btn_primary" href="javascript:">确&nbsp;&nbsp;&nbsp;认</a>
+                            </div>
+                        </div>
+                    {{/each}}
+                </script>
+
+                <script src="./js/jquery-2.1.4.js"></script>
+                <script src="./js/fastclick.js"></script>
+                <script src="./js/jquery-weui.js"></script>
+                <script src="./js/artTemplate.js"></script>
+                <!-- 纯前端模拟接口用 后端开发删除 start-->
+                <script src="http://cdn.bootcss.com/jquery-mockjax/1.6.2/jquery.mockjax.min.js"></script>
+                <script src="./mockjax_data.js"></script>
+                <!-- 纯前端模拟接口用 后端开发删除 end-->
+                <script src="./js/page.js"></script>
+                <script>
+                    var ajax_list = {};
+                        ajax_list.page_index =0;
+                        ajax_list.api = 'page2.aspx';
+                        ajax_list.data = {page:ajax_list.page_index};
+                </script>
+                <script>
+
+                    $(document).on('click.kk','.weui-form-preview__ft',function(){
+                        var ele = $(this);
+                        if(ele.data('clicked'))return;
+                        $.showLoading();
+                        $.post('page2.aspx',{data:312313},function(data){
+                            $.hideLoading();
+                            if(!data.msg){
+                                $.toast("请求失败")
+                            }else{
+                                $.toast("操作成功",500, function() {
+                                    ele.find('a').text('已确认').css('color','#ccc');
+                                    ele.data('clicked',true);
+                                });
+                            }
+                            
+                        })
+                        
+                    });
+                </script>
+    </body>
+</html>
